@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="sv"> <!-- Sätter språket till svenska för webbsidan, dels för validatorn och dels för tillgängligheten -->
+    <head>
+        <meta charset="UTF-8"> <!-- Specificerar kodningen till UTF-8, vilket ger stöd för bokstäver såsom Å, Ä, Ö och andra tecken.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Här för responsivitet -->
+        <title>DA280A - Inlämning 2</title> <!-- Specificerar titeln för webbsidan -->
+    </head>
+    <body>
+        <h1>Mitt urval av artister</h1> <!-- Sidans huvudrubrik -->
+
+        <table border="1"> <!-- Sätter border, deprecated men använder inte någon CSS eftersom vi inte gått igenom det ännu. Ger en varning i validatorn men ses icke som ett fel, hoppas det är okej i rättningen då jag inte förstår hur vi ska uppnå resultatet i exempelbilden utan border-attributet eller CSS (som vi ännu inte gått igenom). -->
+            <caption> <!-- Tabellcaption, beskriver tabellen mycket kort. -->
+                Tabell 1: Mitt urval av artister samlade i en tabell, sorterade efter land.
+            </caption>
+            <thead> <!-- Tabellhuvud -->
+                <tr> <!-- Tabellrad -->
+                    <th>Omslag/Cover</th> <!-- Tabellhuvudcell, till följd av att den ligger innanför ett tr-element som ligger innanför ett thead-element hamnar denna cell i en rad i tabellhuvudet -->
+                    <th>Band-/Artistnamn</th>
+                    <th>Medlemmar/Medlem</th>
+                    <th>Album/Singel</th>
+                    <th>Land</th>
+                    <th>Källa/-or</th>
+                </tr> <!-- Stänger tabellrad -->
+            </thead> <!-- Stänger tabellhuvud -->
+            <tbody> <!-- Här börjar "kroppen" på tabellen, alla rader (tr-element) innanför detta element blir alltså en rad i tabellen-->
+                <tr> <!-- Tabellrad -->
+                    <td> <!-- Tabelldatacell -->
+                        <img width="150" src="assets/images/before_i_forget.jpg" alt="Omslagsbild där ett ansikte sticker upp ovanför en vattenyta."> <!-- Omslagsbild/Cover -->
+                    </td> <!-- Stänger tabelldatacell -->
+                    <td>the Kid LAROI</td> <!-- Artistnamn -->
+                    <td>Charlton Kenneth Jeffrey Howard</td> <!-- Medlemmar/Medlem (artistens riktiga namn) -->
+                    <td>Before I forget</td> <!-- Album -->
+                    <td>Australien</td> <!-- Land -->
+                    <td>
+                        <a href="https://en.wikipedia.org/wiki/The_Kid_Laroi">Källa</a> <!-- Källa i form av en eller flera länkar -->
+                    </td>
+                </tr> <!-- Stänger tabellrad -->
+                <tr> <!-- Samma princip gäller för övriga tabellrader i kroppen, för referens se kommentarerna i första tabellraden i tabellkroppen. -->
+                    <td><img width="150" src="assets/images/the_end_of_an_era_deluxe.jpg" alt="Omslagsbild där artisten Iggy Azalea sitter i en flytstol mitt i en pool."></td>
+                    <td>Iggy Azalea</td>
+                    <td>Amethyst Amelia Kelly</td>
+                    <td>The End of an Era (Deluxe)</td>
+                    <td>Australien</td>
+                    <td>
+                        <p>
+                            <a href="https://open.spotify.com/artist/5yG7ZAZafVaAlMTeBybKAL?si=CCg-rvGjQMevq9-20qW3Aw">Källa 1</a>,
+                            <a href="https://sv.wikipedia.org/wiki/Iggy_Azalea">Källa 2</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr> <!-- Samma princip gäller för övriga tabellrader i kroppen, för referens se kommentarerna i första tabellraden i tabellkroppen. -->
+                    <td><img width="150" src="assets/images/den_svenska_bjornstammen.jpg" alt="Svartvit omslagsbild bestående av en björns nos, mun och ögon."></td>
+                    <td>Den svenska björnstammen</td>
+                    <td>Dan Brännvall, Mattias Göransson, Ambjörn Göransson, Klas Isaksson, Petter Frisendahl och Åke Olofsson.</td>
+                    <td>Med sång / Utan sång</td>
+                    <td>Sverige</td>
+                    <td>
+                        <p>
+                            <a href="https://sv.wikipedia.org/wiki/Den_Svenska_Bj%C3%B6rnstammen">Källa 1</a>,
+                            <a href="https://open.spotify.com/artist/0NyrvUybTePmsuED5vZi4G?si=L-iPP_-mSQGHDAu_snZyIw">Källa 2</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr> <!-- Samma princip gäller för övriga tabellrader i kroppen, för referens se kommentarerna i första tabellraden i tabellkroppen. -->
+                    <td><img width="150" src="assets/images/ar_snook.gif" alt="Omslagsbild bestående av vit texturerad bakgrund med en rosa pyramid i mitten. I pyramiden står texten 'ÄR SNOOK'."></td>
+                    <td>Snook</td>
+                    <td>Daniel Adams-Ray och Oskar Linnros</td>
+                    <td>Är</td>
+                    <td>Sverige</td>
+                    <td><a href="https://open.spotify.com/artist/79tTZzeIjEwOE6JMHG5eBS?si=yoSX_XGcT-iPynM7OJBm3A">Källa</a></td>
+                </tr>
+                <tr> <!-- Samma princip gäller för övriga tabellrader i kroppen, för referens se kommentarerna i första tabellraden i tabellkroppen. -->
+                    <td><img width="150" src="assets/images/lynda_part2.png" alt="Omslagsbild där artisten Convolk visar sin panna samt röda pupiller och blå ögon."></td>
+                    <td>Convolk</td>
+                    <td>Alexander Kanevsky</td>
+                    <td>Lynda part 2</td>
+                    <td>USA</td>
+                    <td>
+                        <p>
+                            <a href="https://genius.com/11258683">Källa 1</a>,
+                            <a href="https://open.spotify.com/artist/3ddT1Q3KQAm1G7UcIfz5KJ?si=I0P9_Uo9QCeVaDwjhUyQuw">Källa 2</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr> <!-- Samma princip gäller för övriga tabellrader i kroppen, för referens se kommentarerna i första tabellraden i tabellkroppen. -->
+                    <td><img width="150" src="assets/images/venus_was_a_riser.jpg" alt="Omslagsbild, i mitten av bilden sticker ett kvinnligt huvud upp över en vattenyta, i bakgrunden skymtas en livlös kropp med magen och ansiktet ner i vattnet."></td>
+                    <td>Deep October</td>
+                    <td>Zac Smith</td>
+                    <td>Venus Was a Riser</td>
+                    <td>USA</td>
+                    <td>
+                        <p>
+                            <a href="https://genius.com/14445733">Källa 1</a>,
+                            <a href="https://open.spotify.com/artist/0nYshUSXrbGoxvSDo03JMc?si=dl5ITSDMSLiJkqknd_eAzA">Källa 2</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr> <!-- Samma princip gäller för övriga tabellrader i kroppen, för referens se kommentarerna i första tabellraden i tabellkroppen. -->
+                    <td><img width="150" src="assets/images/the_room_between.gif" alt="Svartvit omslagsbild, i mitten av bilden står en man i bar överkropp. En strålkastare riktad mot mannen skapar en skugga mot en husvägg till höger om mannen."></td>
+                    <td>Shrimp</td>
+                    <td>Tommy Lloyd</td>
+                    <td>THE ROOM BETWEEN</td>
+                    <td>USA</td>
+                    <td>
+                        <p>
+                            <a href="https://undergroundunderdogs.com/2019/07/06/shrimp-artist-profile/">Källa 1</a>,
+                            <a href="https://open.spotify.com/artist/53WWphw1pE9SBpsjRgU9tC?si=83zi7WJFTB6a2qBH0wep_g">Källa 2</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr> <!-- Samma princip gäller för övriga tabellrader i kroppen, för referens se kommentarerna i första tabellraden i tabellkroppen. -->
+                    <td><img width="150" src="assets/images/before_you_press_play.png" alt="Omslagsbild där artisterna FearDorian och osquinn poserar med vad som ser ut att vara mixerbord eller liknande."></td>
+                    <td>osquinn</td>
+                    <td>Quinn Dupree</td>
+                    <td>Before You Press Play</td>
+                    <td>USA</td>
+                    <td>
+                        <p>
+                            <a href="https://en.wikipedia.org/wiki/Quinn_(musician)">Källa 1</a>,
+
+                        </p>
+                    </td>
+                </tr>
+                <tr> <!-- Samma princip gäller för övriga tabellrader i kroppen, för referens se kommentarerna i första tabellraden i tabellkroppen. -->
+                    <td><img width="150" src="assets/images/ilytommy.jpg" alt="Spegelbild där artisten ilyTommy håller i en bukett vita och röda rosor."></td>
+                    <td>ilyTommy</td>
+                    <td>Tommelik Ward</td>
+                    <td>angel (Senaste singeln, inga album i Spotify)</td>
+                    <td>USA</td>
+                    <td>
+                        <a href="https://wiki-en.org/ilytommy-10-facts-to-know-about/">Källa 1</a>,
+                        <a href="https://open.spotify.com/artist/2QpNu8tDPv9n7oY34J1TtN?si=puZmFaxVR3qu-G2EoDEU4g">Källa 2</a>
+                    </td>
+                </tr>
+                <tr> <!-- Samma princip gäller för övriga tabellrader i kroppen, för referens se kommentarerna i första tabellraden i tabellkroppen. -->
+                    <td><img width="150" src="assets/images/lil_god_dan.png" alt="Selfie av artisten Lil God Dan"></td>
+                    <td>Lil God Dan</td>
+                    <td>Daniel Simon Moritz</td>
+                    <td>gf pt.3 (Senaste singeln, inga album i Spotify)</td>
+                    <td>USA</td>
+                    <td>
+                        <a href="https://genius.com/artists/Lil-god-dan">Källa 1</a>
+                        <a href="https://open.spotify.com/artist/20kAERGCnqfyGydzop8bfg?si=8dNmali-SCyqBwRJKXpH9A">Källa 2</a>
+                    </td>
+                </tr>
+            </tbody> <!-- Stänger tabellkropp -->
+            <tfoot> <!-- Tabellfot -->
+                <tr> <!-- Tabellrad -->
+                    <th>Omslag/Cover</th> <!-- Tabellcell, till följd av att den ligger innanför ett tr-element som ligger innanför ett tfoot-element hamnar denna cell i en rad i tabellfoten -->
+                    <th>Band-/Artistnamn</th>
+                    <th>Medlemmar/Medlem</th>
+                    <th>Album/Singel</th>
+                    <th>Land</th>
+                    <th>Källa/-or</th>
+                </tr> <!-- Stänger tabellrad -->
+            </tfoot> <!-- Stänger tabellfot -->
+        </table> <!-- Stänger tabellen -->
+
+        <!-- En enkel footer -->
+        <br> <!-- Lite white space utan att använda CSS -->
+        <hr> <!-- Drar ett streck mellan innehåll, bör kanske egentligen göras med CSS då det enbart är i dekorativt syfte - men det får vänta tills CSS introduceras i kursen -->
+        <footer>
+            <p>Hemsidan är skapad av <a href="https://snicon.rip">Sixten Peterson</a> för kursen <a href="https://mau.se/sok-utbildning/kurser/DA280A">DA280A</a> på
+                <a href="https://mau.se/">Malmö Universitet</a>. Källkoden finns tillgänglig på <a href="https://github.com/Snicon/DA280A_Web-Development-I">Github</a>.</p>
+        </footer>
+    </body>
+</html>
