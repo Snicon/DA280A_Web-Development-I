@@ -1,0 +1,111 @@
+<!--
+Kod och kommentarer författade av Sixten Peterson, 2026-02-26.
+
+Angående hänvisning till sidor:
+Alla hänvisningar till sidor utan boknamn görs till kursboken "HTML och CSS-boken" av Rolf Staflin (den andra tryckningen av sjunde omarbetade upplagan).
+Vid något/några tillfällen hänvisas även till "HTML & CSS - design and build websites" av Jon Duckett (en personlig favorit om HTML och CSS från min bokhylla. Vid dessa tillfällen står såväl boknamn som författare efter sidnumret.
+
+Kort om kommentarer:
+Vissa element har inte kommenterats fullt ut för att slippa upprepning, jag har försökt att istället lägga fokus på att förklara vad elementen gör och hur de fungerar när de dyker upp för första gången.
+-->
+<!DOCTYPE html>
+<html lang="sv"> <!-- Sätter språket till svenska för webbsidan, dels för validatorn och dels för tillgängligheten -->
+    <head>
+        <meta charset="UTF-8"> <!-- Specificerar kodningen till UTF-8, vilket ger stöd för bokstäver såsom Å, Ä, Ö och andra tecken.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Här för responsivitet -->
+        <title>DA280A - Inlämning 3</title> <!-- Specificerar titeln för webbsidan -->
+    </head>
+    <body>
+        <h1>Blomstermålabladets läsarundersökning</h1> <!-- Sidans huvudrubrik -->
+        <p>Vi på Blomstermålabladet är nyfikna på att få veta vilka som besöker vår webbplats, vad ni tycker om webbplatsen och vilka delar ni besöker mest. Genom att fylla i formuläret nedan har ni chansen att vinna en T-shirt.</p> <!-- Kort beskrivande text till formuläret. -->
+
+        <form action="http://webshare.mah.se/tszagh/response.php" method="get"> <!-- Formulär med metod "get", attributet hade kunnat lämnas tomt då det förvalt (s.246 HTML och CSS-boken) men specificeras för tydlighetens skull. Mycket kort gör get att innehållet från formuläret blir synligt i URL:n vid "submit" (s.307-308). Actionattributet specificerar vilken webbadress som anropas när användaren skickat sitt formulär (s.246) -->
+            <fieldset> <!-- Grupperar alla fält och "etiketter"/labels som har med kontaktuppgifter att göra (s.267) -->
+                <legend>Kontaktuppgifter</legend> <!-- Ger en rubrik till grupperingen (s.267) -->
+                <label for="name">Namn:</label> <!-- Genom att specificera for-attributet med samma sträng som specificerats som id i ett annat element kan etiketten hänvisa till input-elementet nedan utan "nästla" det i sig. (s. 266) -->
+                <input type="text" name="name" id="name" required placeholder="Namn här..."><br><br> <!-- Då type="text" innebär att ett textfält skapas, name-attributet ger ett namn till elementet som används när formuläret skickas till servern (s.249). id-attributet används av label-elemenetent ovan, och required gör att värdet är obligatoriskt (går inte att skicka formuläret utan att fylla i) (s.298). Placeholder låter attributvärdet agera platshållare, när besökaren börjar skriva ett värde försvinner platshållaren (s.168 HTML & CSS, Jon Duckett.-->
+
+                <label for="age">Ålder:</label>
+                <input type="number" name="age" id="age" required placeholder="Ålder här..."> <!-- Attributvärdet "number" gör att besökaren bara kan fylla i nummer. Attributet step har attributvärdet "1" förvalt även om attributet inte specificeras, således måste talet som matas in vara ett heltal - vilket passar bra för ålder då vi inte bryr oss om besökaren precis fyllt 18 eller är 18 och ett halvt. (s.281-283) -->
+            </fieldset>
+
+            <br> <!-- För lite finare grafisk utformning nyttjas br-elementet för lite extra white space -->
+
+            <fieldset> <!-- Grupperar alla fält och "etiketter"/labels som har med besöken på blomstermålabladet att göra (s.267) -->
+                <legend>Dina besök på blomstermålabladet</legend>
+                <p>Hur ofta besöker du blomstermålabladet?</p>
+                <input type="radio" name="visit_frequency" id="visit_frequency_daily" value="daily" required> <!-- När attributvärdet är "radio" för attributet type blir input-elementet en radioknapp, enbart ett av elementen med samma värde i name-attributet kan vara vald åt gången (s.255). Förutsatt att alla radio buttons har samma namn i name-attributet räcker det att bara skriva required i en av dessa, men i syfte att undvika förvirring rekommenderas att required används i alla radioknappar. (Dessutom lättare att på så vis se om man råkat skriva fel namn i ett av elementen) -->
+                <label for="visit_frequency_daily">Varje dag</label><br>
+                <input type="radio" name="visit_frequency" id="visit_frequency_every_other_day" value="weekly" required> <!-- Samma princip som tidigare radioknapp, sparar dig massa copy+paste kommentarer framöver.-->
+                <label for="visit_frequency_every_other_day">Varannan dag</label><br>
+                <input type="radio" name="visit_frequency" id="visit_frequency_weekly" value="weekly" required>
+                <label for="visit_frequency_weekly">Varje vecka</label><br>
+
+                <p>Vilka delar av blomstermålabladet brukar du besöka?</p>
+                <input type="checkbox" name="pages" id="pages_news" value="pages_news"> <!-- Attributvärdet "checkbox" skapar en input som är ganska lik radioknappen, men med dessa rutor kan flera olika rutor väljas samtidigt. (s.254) -->
+                <label for="pages_news">Nyheter</label><br>
+                <input type="checkbox" name="pages" id="pages_foreign" value="pages_foreign">
+                <label for="pages_foreign">Utrikes</label><br>
+                <input type="checkbox" name="pages" id="pages_domestic" value="pages_domestic">
+                <label for="pages_domestic">Inrikes</label><br>
+                <input type="checkbox" name="pages" id="pages_sport" value="pages_sport">
+                <label for="pages_sport">Sport</label><br>
+                <input type="checkbox" name="pages" id="pages_gossip" value="pages_gossip">
+                <label for="pages_gossip">Skvaller</label><br>
+                <input type="checkbox" name="pages" id="pages_weather" value="pages_weather">
+                <label for="pages_weather">Väder</label><br>
+                <input type="checkbox" name="pages" id="pages_other" value="pages_other">
+                <label for="pages_other">Övrigt</label><br>
+            </fieldset>
+
+            <br> <!-- För lite finare grafisk utformning nyttjas br-elementet för lite extra white space -->
+
+            <fieldset> <!-- Grupperar alla fält och "etiketter"/labels som har att göra med att vinna en T-shirt (s.267) -->
+                <legend>Vinn en T-shirt!</legend>
+
+                <p>Ni har möjlighet att vinna en T-shirt om ni fyller i följande information:</p>
+
+                <label for="pros">Bästa med blomstermålabladet:</label><br>
+                <textarea name="pros" id="pros"></textarea> <!-- Likt en input med type="text" men med stöd för flera rader, och såldes bättre för längre text. Jag har valt att inte justera storleken på textrutan med attributen "cols" och "rows" men möjligheten finns där. (s. 260-261)-->
+
+                <br><br> <!-- Det ska bli skönt att snart kunna få använda sig av css så att en slipper alla dessa tråkiga br-element -->
+
+                <label for="cons">Sämsta med blomstermålabladet:</label><br>
+                <textarea name="cons" id="cons"></textarea>
+
+                <br><br>
+
+                <label for="e-mail">E-post:</label>
+                <input type="email" name="e-mail" id="e-mail" placeholder="t.ex. sixten@snicon.rip"><br><br>
+
+                <label for="size">Storlek:</label>
+                <select name="size" id="size"> <!-- Lite likt radioknapparna i och med att en bara kan välja ett värde (då attributet "multiple" inte är specificerat) men nu i form av en dropdownlista istället. (s.261) -->
+                    <option value="xs">XS</option><!-- Ett av de olika alternativen i dropdownlistan, då värdet är specificerat skickas värdet till servern när formuläret skickas. Hade värdet inte varit specificerat hade texten mellan den öppnande och stängande taggen agerat värde. (s.262-263) -->
+                    <option value="s">S</option>
+                    <option value="m" selected>M</option> <!-- selected-attributet gör alternativet förvalt (s.262). M är förvalt till följd av kraven i uppgiftsbeskrivningen. -->
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+            </fieldset>
+
+            <br> <!-- För finare white space -->
+
+            <fieldset> <!-- Grupperar skicka- och återställ-fälten (s.267) -->
+                <legend>Skicka/Återställ</legend>
+
+                <br>
+                <button type="submit" name="submit" value="submit">Skicka</button> <!-- Typen "submit" innebär att när knappen klickas skickas formuläret till servern (genom URL:n i attributvärdet för attributet action) (s.251-252). -->
+                <button type="reset" name="reset">Återställ formulär</button> <!-- type="reset" gör att formuläret återställs utan att skicka data till servern (s.253) -->
+                <br><br>
+            </fieldset>
+        </form>
+
+        <!-- En enkel footer -->
+        <br> <!-- Lite white space utan att använda CSS -->
+        <hr> <!-- Drar ett streck mellan innehåll, bör kanske egentligen göras med CSS då det enbart är i dekorativt syfte - men det får vänta tills CSS introduceras i kursen -->
+        <footer>
+            <p>Hemsidan är skapad av <a href="https://snicon.rip">Sixten Peterson</a> för kursen <a href="https://mau.se/sok-utbildning/kurser/DA280A">DA280A</a> på
+                <a href="https://mau.se/">Malmö Universitet</a>. Källkoden finns tillgänglig på <a href="https://github.com/Snicon/DA280A_Web-Development-I">Github</a>.</p>
+        </footer>
+    </body>
+</html>
