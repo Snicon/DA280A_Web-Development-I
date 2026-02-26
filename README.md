@@ -103,7 +103,7 @@ In addition to making the website in the same way that the others were made we a
 
 | Assignment        | Handed in | Grade      | Best possible grade |
 |-------------------|-----------|------------|---------------------|
-| Assignment 1      | &#9745;   | -          | G                   |
+| Assignment 1      | &#9745;   | G (Pass)   | G (Pass)            |
 | Assignment 2      | &#9745;   | -          | G                   |
 | Assignment 3      | &#9744;   | -          | G                   |
 | Assignment 4      | &#9744;   | -          | G                   |
