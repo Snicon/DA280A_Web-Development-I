@@ -89,10 +89,6 @@ font-weight
 
 ### Assignment 5 - Mimicking a screenshot
 For this assignment we are supposed to make a website that is identical to a screenshot with the freedom of choosing colors ourselves.
-```HTML
-<fieldset>
-<legend>
-```
 
 ### Assignment 6 - Implementing a layout from a screenshot with some creative freedom
 In addition to making the website in the same way that the others were made we are also supposed to make it responsive using media queries.
