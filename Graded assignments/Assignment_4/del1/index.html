@@ -1,0 +1,86 @@
+<!--
+Kort angående kommentarer:
+Kommentarer som introducerats/författats under del 1 av inlämningsuppgift 4 får en slags prefix på "INLUPP4" för att
+skilja mellan tidigare kommentarer:
+-->
+<!doctype html>
+<html lang="sv"> <!-- Sätter språket till svenska för webbsidan, dels för validatorn och dels för tillgängligheten -->
+    <head>
+        <meta charset="UTF-8"> <!-- Specificerar kodningen till UTF-8, vilket ger stöd för bokstäver såsom Å, Ä, Ö och andra tecken.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Här för responsivitet -->
+        <title>DA280A - Inlämning 4, del 1</title> <!-- Specificerar titeln för webbsidan -->
+    </head>
+    <body style="background-color: beige"> <!-- INLUPP4: Jag vet, kanske inte så rolig färg - men den är inte vit! -->
+        <nav style="background-color: black; color: white; text-align: center; border-bottom: 2px solid white;" >
+            <!-- Det går att diskutera huruvida det är okej med mer än ett H1-element eller ej men jag har valt att bara
+            justera storleken på texten över att ha två H1-element i syfte att förbättra tillgängligheten. För övrigt
+            sätts texten till fetstil.-->
+            <h2 style="font-weight: bold; font-size: xx-large">Meny</h2>
+            <!-- list-style: none tar bort punkterna som vanligtvis visas i oordnade listor. Genom att padding sätts
+            till noll säkerställs att listan centreras lik övrig text. -->
+            <ul style="list-style: none; padding: 0;">
+                <!-- För att göra det enklare att kopiera navelementet över alla sidor valde jag att sätta en relativ
+                filsökväg på detta vis. Det är inte ovanligt att bara sätta ett hashtagg (#) för länken till den egna
+                sidan, hur som helst fungerar båda implementationerna lika bra. -->
+                <li><a href="../del1/index.html" style="color: white;">Startsida (om författare)</a></li>
+                <li><a href="../del2/index.html" style="color: white;">Om CSS</a></li>
+                <li><a href="../del3/index.html" style="color: white;">Mall för CSS</a></li>
+            </ul>
+        </nav>
+
+        <h1 style="text-align: center; font-family: Arial, sans-serif; color: white; background-color: #991b1b; border-radius: 0.8rem">Författaren Cal Newport</h1> <!-- Webbsidans huvudrubrik, det får bara finnas ett h1-element --> <!-- INLUPP 4: Centrerar rubriken, sätter typsnitt till Arial eller sans-serif som fallback där Arial ej stöds i webbläsaren. Sätter även bakgrundfärg och textfärg, båda OK enligt WCAG AAA för stor text. Border radius sätts för lite extra finess. -->
+        <figure style="text-align: center;"> <!-- Jag valde att nyttja figure-elementet för att lägga till en bildtext då det ökar tillgängligheten på webbsidan. --> <!-- Centrerar bilden genom text-align: center. -->
+            <img style="width: 400px;" src="assets/images/cal_newport.jpg" alt="Cal Newport ser dig djupt in i själen, bakom honom skymtas en bokhylla fylld med böcker."> <!-- Även om det inte är det bästa värdet på alt-attributet ökar det tillgängligheten. --> <!-- INLUPP4: width-attributet har ersatts av CSS där width har ett värde på 400px -->
+            <figcaption>En porträttbild av Cal Newport.</figcaption> <!-- Bildtext -->
+        </figure>
+
+        <h2 style="text-align: center; border: 2px solid #fb923c; border-radius: 0.8rem">Vem är Cal Newport?</h2> <!-- Underrubrik --> <!-- INLUPP4: Sätter en solid border om 2px med orange färg. Ytterligare används border-radius för extra finess. -->
+        <p><a href="https://calnewport.com/"><em>Cal Newport</em></a> är en bästsäljande författare som arbetar som professor inom datavetenskap för Georgetown University.</p> <!-- Kort beskrivning av författaren -->
+
+        <h2 style="text-align: center; border: 2px solid #fb923c; border-radius: 0.8rem">Kända böcker</h2> <!-- Underrubrik -->
+        <!-- Nedan listas några av författarens populära verk, där boktiteln är på engelska justeras lang-attributet med ett värde på "en" för ökad tillgänglighet. -->
+        <p>Tre av författarens mest kända verk är följande böcker:</p>
+        <ul>
+            <li lang="en"><strong>Deep Work</strong>: Rules for Focused Success in a Distracted World</li>
+            <li lang="en"><strong>A World Without Email</strong>: Reimagining Work in an Age of Communication Overload</li>
+            <li lang="en"><strong>Digital Minimalism</strong>: Choosing a Focused Life in a Noisy World</li>
+        </ul>
+
+        <h3 style="text-align: center; font-style: italic;">Rangordning av böckerna</h3> <!-- Djupare nivå av underrubrik. --> <!-- INLUPP4: Gör texten kursiv (italic) -->
+        <!-- Nedan presenteras min rangordning av böckerna med hjälp av en ordered list för att tydligt visa vilken position böckerna hamnar på. Även här justeras lang-attributet. -->
+        <p>Nedan presenteras mina favoriter från författaren, rangordnade bäst till sämst utifrån mitt eget tycke och smak.</p>
+        <ol>
+            <li><span lang="en">Digital Minimalism</span></li>
+            <li><span lang="en">Deep Work</span></li>
+            <li><span lang="en">A World Without Email</span></li>
+        </ol>
+
+        <h3 style="text-align: center; font-style: italic;">Köp böckerna</h3> <!-- Ytterligare en djupare nivå av underrubrik. -->
+        <p>Nedan presenteras länkar till både Amazon och Bokus för att beställa Newports böcker.</p>
+
+        <h4 lang="en" style="text-align: center; color: #15803d;">Deep Work</h4> <!-- Samma princip som den tidigare koden. --> <!-- INLUPP4: Färg OK enligt WCAG AA för liten text, duger gott och väl för inlämningen iallafall.-->
+        <ul>
+            <li><a href="https://www.amazon.se/-/en/Deep-Work-Focused-Success-Distracted/dp/0349411905">Beställ hos Amazon</a></li>
+            <li><a href="https://www.bokus.com/bok/9780349411903/deep-work/">Beställ hos Bokus</a></li>
+        </ul>
+
+        <h4 lang="en" style="text-align: center; color: #15803d;">A World Without Email</h4>
+        <ul>
+            <li><a href="https://www.amazon.se/-/en/World-Without-Email-Reimagining-Communication/dp/0593332601">Beställ hos Amazon</a></li>
+            <li><a href="https://www.bokus.com/bok/9780241341414/world-without-email/">Beställ hos Bokus</a></li>
+        </ul>
+
+        <h4 lang="en" style="text-align: center; color: #15803d;">Digital Minimalism</h4>
+        <ul>
+            <li><a href="https://www.amazon.se/-/en/Digital-Minimalism-Choosing-Focused-Noisy/dp/0241453577">Beställ hos Amazon</a></li>
+            <li><a href="https://www.bokus.com/bok/9780241453575/digital-minimalism/">Beställ hos Bokus</a></li>
+        </ul>
+
+        <!-- En enkel footer -->
+        <br> <!-- Lite white space utan att använda CSS -->
+        <footer style="border-top: 1px solid black; background-color: #e4e4e7; text-align: center; padding-bottom: 0.45rem;"> <!-- INLUPP4: Ej kollat kontrast men spelar ingen roll för inlämningen iallfall. -->
+            <p>Hemsidan är skapad av <a href="https://snicon.rip">Sixten Peterson</a> för kursen <a href="https://mau.se/sok-utbildning/kurser/DA280A">DA280A</a> på
+                <a href="https://mau.se/">Malmö Universitet</a>. Källkoden finns tillgänglig på <a href="https://github.com/Snicon/DA280A_Web-Development-I">Github</a>.</p>
+        </footer>
+    </body>
+</html>
