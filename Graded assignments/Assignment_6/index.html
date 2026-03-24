@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="sv"> <!-- Sätter språket till svenska för webbsidan, dels för validatorn och dels för tillgängligheten -->
+    <head>
+        <meta charset="UTF-8"> <!-- Specificerar kodningen till UTF-8, vilket ger stöd för bokstäver såsom Å, Ä, Ö och andra tecken.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Här för responsivitet -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>DA280A - Inlämning 6</title> <!-- Specificerar titeln för webbsidan -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main-container">
+            <aside class="sidenav"> <!-- Navigationsmeny -->
+                <div class="sidenav-content">
+                    <img class="nav-logo" src="assets/images/tux.png" alt="Tux the penguin">
+                    <h2>Meny</h2>
+                    <nav class="nav-menu">
+                        <ul> <!-- Alla navigationslänkar -->
+                            <li class="nav-item"><a href="#">Länk 1</a></li>
+                            <li class="nav-item"><a href="#">Länk 2</a></li>
+                            <li class="nav-item"><a href="#">Länk 3</a></li>
+                            <li class="nav-item"><a href="#">Länk 4</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+
+            <div class="main-content"> <!-- Webbsidans huvudinnehåll -->
+                <main>
+                    <h1>Pingviner</h1> <!-- Titel/huvudrubrik -->
+                    <div class="card-container"> <!-- Container för pingvinkorten. Dessa visas i ett grid med lite padding. -->
+                        <div class="card"> <!-- Ett av pingvinkorten. -->
+                            <div> <!-- klasslös container för att underlätta layouting med flexbox-->
+                                <img src="assets/images/kejsarpingvin.jpg" alt="Tre kejsarpingviner står på rad."> <!-- Bild lånad från Wikipedia. -->
+                                <p> <!-- Text lånad från Wikipedia... ord för ord...-->
+                                    Kejsarpingvin (<i>Aptenodytes forsteri</i>) är den största och tyngsta nu levande
+                                    pingvinarten och är endemisk för Antarktis. Hanen och honan är lika såväl till fjäderdräkt
+                                    som storlek, vilken uppgår till cirka 120 centimeter. De väger i genomsnitt mellan 22 och
+                                    37 kg. Ryggdelarna är svarta och skarpt avgränsade från den vita buken, det blekgula bröstet
+                                    och de bjärt gula öronfläckarna. Liksom alla pingviner saknar den flygförmåga, har en
+                                    strömlinjeformad kropp och vingarna är stela och tillplattade till fenor för ett liv i
+                                    havet.
+                                </p>
+                            </div>
+
+                            <p class="source">Källa: <a href="https://sv.wikipedia.org/wiki/Kejsarpingvin">Wikipedia (Kejsarpingvin)</a></p> <!-- Källa för text -->
+                        </div>
+                        <div class="card"> <!-- Samma princip som för kortet ovan -->
+                            <div>
+                                <img src="assets/images/asnepingvin.jpg" alt="Två åsnepingviner som tittar på varandra näbb mot näbb. Det ser nästan ut som att de är på väg att pussas.">
+                                <p>
+                                    Åsnepingvin (<i>Pygoscelis papua</i>) är en upp till 80 centimeter hög pingvinart som lever
+                                    i Antarktis och på subantarktiska öar. Hanarna väger som mest omkring 8 kg och ner mot 5,5
+                                    kg strax före parningstid. Honorna väger som mest omkring 7,5 kg och går ner till under 5 kg
+                                    när de vaktar ungarna i boet.
+                                </p>
+                            </div>
+
+                            <p class="source">Källa: <a href="https://sv.wikipedia.org/wiki/%C3%85snepingvin">Wikipedia (Åsnepingviner)</a></p>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <img src="assets/images/nordlig-klipphopparpingvin.jpg" alt="En nordlig klipphopparpingvin med frissig frisyr ser ut över vattnet.">
+                                <p>
+                                    Nordlig klipphopparpingvin (<i>Eudyptes moseleyi</i>) är en starkt hotad art av pingviner
+                                    och en av de arter som lever längst norrut. Nordlig klipphopparpingvin är en 55 centimeter
+                                    lång pingvin med röda ögon, vit undersida och skiffergrå ovansida. Den har karakteristiska
+                                    mycket långa och starkt gula ögonbryn som slutar i långa gula plymer bakom ögonen. Ovansidan
+                                    av huvudet har spetsiga svarta fjädrar. De närbesläktade arterna västlig klipphopparpingvin
+                                    och östlig klipphopparpingvin har bredare ögonbryn och ännu längre plymer.
+                                </p>
+                            </div>
+
+                            <p class="source">Källa: <a href="https://sv.wikipedia.org/wiki/Nordlig_klipphopparpingvin">Wikipedia (Nordlig klipphopparpingvin)</a></p>
+                        </div>
+                    </div>
+
+                    <hr> <!-- avgränsarlinje -->
+
+                    <div class="card card-special"> <!-- "Speciellt" kort i det avseendet att et skiljer sig lite från korten ovan. -->
+                        <div class="card-content"> <!-- Kortinnehållet hamnar här-->
+                            <img src="assets/images/simmande-pingvin.jpg" alt="En pingvin som simmar. Det går att se luftbubblor efter pingvinen som har kastat sig ner i vattnet.">
+                            <div>
+                                <p>
+                                    <b>Pingviner</b> (Spheniscidae) är den enda familjen inom ordningen <b>pingvinfåglar</b>
+                                    (Sphenisciformes) och omfattar en grupp flygoförmögna havsfåglar. De förekommer nästan
+                                    enbart på södra halvklotet – bara galápagospingvinen förekommer norr om ekvatorn. Pingviner
+                                    är väl anpassade för ett liv i havet med motskuggad fjäderdräkt i svart och vitt och med
+                                    tillbakabildade vingar som används som simfenor. De flesta arter lever av krill, fisk,
+                                    bläckfisk och liknande som de fångar under sina dyk. De tillbringar drygt hälften av sina
+                                    liv på land och övrig tid i havet.
+                                </p>
+                                <p>
+                                    Familjen omfattar sex släkten, sjutton arter och ett antal underarter. Även om nästan alla
+                                    pingviner lever på södra halvklotet så återfinns bara ett fåtal i riktigt kallt klimat, så
+                                    långt söderut som Antarktis. Många arter förekommer i den tempererade zonen, och en art i
+                                    tropiskt klimat vid ekvatorn.
+                                </p>
+
+                                <p>
+                                    Den största idag förekommande arten inom familjen är kejsarpingvinen
+                                    (<i>Aptenodytes forsteri</i>) som i genomsnitt som vuxen mäter 1,1 meter och väger ungefär
+                                    35 kg. Den minsta arten är dvärgpingvin (Eudyptula minor), som mäter ungefär 40 cm och bara
+                                    väger runt ett kilogram. De större arterna förekommer främst i kallare klimat medan de
+                                    mindre förekommer i varmare. Vissa förhistoriska arter var riktiga jättar. Den största kända
+                                    arten från fossil är <i>Anthropornis nordenskjoeldi</i> som mätte dryga 165 centimeter och
+                                    levde för cirka 40 miljoner år sedan.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p>Källa: <a href="https://sv.wikipedia.org/wiki/Pingviner">Wikipedia (Pingviner)</a></p> <!-- Källa för text-->
+                    </div>
+                </main>
+
+                <!-- En enkel footer -->
+                <footer>
+                    <hr>
+                    <p id="ugly-footer-text">Skriven i HTML 5</p> <!-- Vi kanske kan se mellan fingrarna vad gäller namnet... -->
+                    <p>
+                        Hemsidan är skapad av <a href="https://snicon.rip">Sixten Peterson</a> för kursen <a href="https://mau.se/sok-utbildning/kurser/DA280A">DA280A</a> på
+                        <a href="https://mau.se/">Malmö Universitet</a>. Källkoden finns tillgänglig på <a href="https://github.com/Snicon/DA280A_Web-Development-I">Github</a>.
+                    </p>
+                    <hr>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,224 @@
+/* Lite enkel återställning av CSS och justerad stil för återkommande element */
+html, body, ul {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubrik', sans-serif;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Containrar */
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 1.2rem;
+}
+
+/* Navigation */
+.sidenav {
+    background-color: rgb(253,186,116);
+    text-align: center;
+}
+
+.sidenav > h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.nav-logo {
+    display: none;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+.nav-item a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Rubrik', sans-serif;
+    background-color: white;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    display: block;
+}
+
+.nav-item a:hover {
+    background-color: darkslategrey;
+    color: white;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* Värdena för cubic-bazier är kopierade från TailwindCSS: https://tailwindcss.com/docs/transition-timing-function#basic-example */
+}
+
+.nav-menu {
+    padding: 0.5rem;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.8rem;
+    margin-top: 0.6rem;
+}
+
+/* Huvudinnehåll */
+.main-content {
+     padding: 0 2rem;
+ }
+
+main > h1 {
+    text-align: center;
+}
+
+/* Kortrelaterad CSS */
+.card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
+.card img {
+    border-radius: 0.6rem;
+    aspect-ratio: 3 / 2; /* Lite fult trick av mig, men detta gör så att alla bilderna (som är av olika upplösning och bildförhållande) ser lika stora ut på skärmen, men på bekostnad av att vissa bilder blir lite fult "ihoptryckta". Godtycklig lösning för en inlämningsuppgift, men kanske inget jag hade levererat till en kund om jag representerat en webbyrå. */
+    width: 100%;
+}
+
+.card-special {
+    display: flex;
+    margin-top: 0;
+}
+
+.card-special img {
+    background-color: white;
+    padding: 0.5rem;
+    border: 1px solid lightgray;
+    border-radius: 0;
+    box-shadow: 0 0 0.3rem darkgray;
+    margin: 0 1rem;
+    width: stretch;
+}
+
+/* Sidfot relaterat */
+footer {
+    text-align: center;
+}
+
+footer #ugly-footer-text {
+    font-style: italic;
+}
+
+/* Första brytpunkten för responsive CSS. CSS-en är utvecklad utefter mobil-först-principen vilket innebär att dessa brytpunkter är för att justera för större skärmar. */
+@media (min-width: 769px) {
+    /* Huvudinnehåll  */
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        flex: 3;
+    }
+
+    .main-container {
+        flex-direction: row;
+    }
+
+    main > h1 {
+        text-align: left;
+        font-size: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Navigation */
+    .sidenav {
+        /* Säkerställer att sidomenyn sträcker sig över hela längden på sidan nedan: */
+        position: sticky;
+        top: 0;
+        flex: 2;
+    }
+
+    .sidenav h2 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .nav-logo {
+        display: block;
+        width: 8rem;
+        margin: 2rem auto;
+    }
+
+    .sidenav-content {
+        /* För så att navigationen alltid följer med i sidomenyn så att användaren alltid kan växla sida oavsett om den skrollat eller ej. */
+        position: sticky;
+        top: 2rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Andra brytpunkten, nu för lite bredare skärmar */
+@media (min-width: 1280px) {
+    /* Huvudinnehåll */
+    .main-content {
+        flex: 3;
+    }
+
+    /* Kortrelated CSS */
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .card-special .card-content img {
+        flex: 2;
+    }
+
+    .card-special .card-content div {
+        flex: 3;
+    }
+
+    /* Navigation */
+    .sidenav {
+        flex: 1;
+    }
+}
+
+/* Trejde brytpunkten, ännu lite bredare skärmar */
+@media (min-width: 1920px) {
+    /* Huvudinnehåll */
+    .main-content {
+        flex: 6;
+    }
+
+    /* Kortrelaterad CSS */
+    .card-special .card-content {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 3rem;
+        font-size: 1.2rem;
+    }
+    .card-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Fjärde och sista brytpunkten, enbart här för att göra det någorlunda fint på min högupplösta skärm. */
+@media (min-width: 2560px) {
+    /* Huvudinnehåll */
+    .main-content {
+        flex: 10;
+    }
+}
