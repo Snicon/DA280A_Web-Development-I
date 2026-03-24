@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="sv"> <!-- Sätter språket till svenska för webbsidan, dels för validatorn och dels för tillgängligheten -->
+    <head>
+        <meta charset="UTF-8"> <!-- Specificerar kodningen till UTF-8, vilket ger stöd för bokstäver såsom Å, Ä, Ö och andra tecken.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Här för responsivitet -->
+        <link rel="stylesheet" href="assets/style.css">
+        <title>DA280A - Inlämning 5</title> <!-- Specificerar titeln för webbsidan -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header> <!-- En enkel header lik bildbeskrivningen i uppgiften -->
+            <p class="nav-heading">Min Webbsida</p> <!-- Webbsidans namn -->
+            <div class="info-container">
+                <p>Inlämningsuppgift 5</p>
+                <p>Sixten Peterson</p>
+                <p>AQ9300</p>
+            </div>
+        </header>
+
+        <nav> <!-- Navigationselement som länkar vidare till webbplatsens andra sidor. -->
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="min_forfattare.html">Min författare</a></li>
+                <li><a href="om_css.html">Om CSS</a></li>
+                <li><a href="ovrigt.html">Övrigt</a></li>
+            </ul>
+        </nav>
+
+        <div class="container container-start"> <!-- Enkel container för elementen, ger lite padding och nyttjar sig av grid -->
+            <main> <!-- Nedan följer webbsidans huvudinnehåll som består av en jämförelse mellan InlinceCSS och externa stilmallar-->
+                <h1>Inline CSS & externa stillmallar</h1>
+                <h2>Inline CSS</h2>
+                <p>
+                    Inline CSS innebär att attributet <code>style</code> används för att modifiera en eller flera
+                    CSS-egenskaper för HTML-elementet med attributet. Den största styrkan med inline CSS är
+                    flexibiliteten med att kunna justera stilen för ett enskilt element efter behov. Den flexibiliteten
+                    kommer dock inte utan nackdelar, genom att använda inline CSS bryter utvecklaren mot principen om
+                    separation of concerns.
+                </p>
+                <p>
+                    I vissa fall kan inline CSS vara den enda lösningen för att justera
+                    utseendet. Detta gäller främst i olika typer av CMS-system där en redaktör utan behörighet till
+                    webbservern önskar göra mindre justeringar av t.ex. text- eller bildelement. CMS-verktyg som låter
+                    redaktören skriva HTML med style-attributet kan således kringå en krånglig process av att uppdatera
+                    en CSS-fil.
+                </p>
+                <h3>Fördelar</h3>
+                <ul class="pros"> <!-- Applicerar en list-style-type med "+ " för att visa att det är något positivt. -->
+                    <li>Simplicitet: Behöver bara ändra på "kod" på ett ställe.</li>
+                    <li>Flexibilitet: Det går lätt att justera utseendet på ett enskilt element efter behov.</li>
+                    <li>CMS: Lämplig lösning (eller räddning) efter behov i CMS-verktyg.</li>
+                </ul>
+
+                <h3>Nackdelar</h3>
+                <ul class="cons"> <!-- Applicerar en list-style-type med "- " för att visa att det är något negativt. -->
+                    <li>Underhåll: Webbplatser som består av flera olika sidor blir svårare att underhålla.</li>
+                    <li>Principen om separation of concerns: Inline CSS bryter mot principen genom att blanda HTML och CSS i samma fil.</li>
+                </ul>
+
+                <h2>Externa stilmallar</h2>
+                <p>
+                    Externa stilmallar innebär att CSS-egenskaper modifieras i en (eller flera) separata filer. För att
+                    modifiera egenskaperna för ett eller flera element används CSS-selektorer. Selektorerna tillåter mer
+                    avancerad CSS. Oftast används så kallade klasser i selektorerna för att välja vilket/vilka element
+                    som ska få sina CSS-egenskaper modifierade. Ibland används ett id istället på ett identiskt sätt av
+                    olika skäl. Det går dessutom att skippa klasser och id helt och hållet genom att istället
+                    specificera elementet efter dess namn (t.ex. <code>a</code> eller <code>body</code>).
+                </p>
+
+                <p>
+                    För klasser gäller det att de HTML-element som ska få de modifierade CSS-egenskaperna har med
+                    klassnamnet i sitt <code>class</code>-attribut (t.ex. <code>&lt;a class="klassnamn"&gt;</code>).
+                    I CSS-filen författas en selektor till klassen med en punkt före klassnamnet för att specificera att
+                    det är en klass (t.ex. <code>.klassnamn {}</code>). Principen är densamma för id, men istället för
+                    <code>class</code>-attributet används <code>id</code>-attributet och istället för en punkt används
+                    ett hashtag (#).
+                </p>
+
+                <p>
+                    Den största styrkan med externa stilmallar är det förenklade underhållet som skapas när flera olika
+                    HTML-dokument kan peka till samma CSS-fil. Det gör i sin tur att CSS-egenskaper modifieras över
+                    flera sidor på samma sätt, vilket gör att ändringar följer med på alla sidor.
+                    En annan fördel är den ökade kontrollen som CSS-selektorerna och kombinatorerna ger i CSS-filerna.
+                    Det går att göra mer komplexa stilmallar med hjälp av diverse selektorer och kombinatorer.
+                    CSS-tricks har en mycket bra <a href="https://css-tricks.com/css-selectors/">artikel om selektorer
+                    och kombinatorer</a> som visar vad som är möjligt. Dessutom följer externa stilmallar principen om
+                    separation of concerns eftersom CSS hamnar i en egen fil och HTML i en annan.
+                </p>
+
+                <p>
+                    Genom att använda sig av CSS-filer blir det lätt för utvecklare att skapa nya teman till färdiga
+                    webblösningar. Säg till exempel att du som frilansande utvecklare har en kund som önskar fräscha upp
+                    sin webbshop eller sitt forum. Som utvecklare kan du enkelt skapa ett nytt tema genom att duplicera
+                    CSS-filerna och ändra CSS-egenskaperna innanför selektorerna. Det går såklart att diskutera hur det
+                    påverkar eventuella uppdateringar av den färdiga webblösningen, men det är en helt annan historia.
+                </p>
+
+                <p>
+                    Vad gäller nackdelar kan den ökade komplexiteten som uppstår genom selektorer och kombinatorer leda
+                    till förvirring hos utvecklaren om den inte har full koll på hur de fungerar. Dessutom som med allt
+                    i webbläsaren, fler filer innebär fler HTTP-förfrågningar som i sin tur kan öka på laddningstiden.
+                    Detta gäller i synnerhet då filerna blir stora, vilket knappast är ett problem i dessa uppgifter.
+                </p>
+
+                <h3>Fördelar</h3>
+                <ul class="pros">
+                    <li>Underhåll: Tack vare återanvändning.</li>
+                    <li>Kraftfullhet: Ökad kontroll med selektorer och kombinatorer.</li>
+                    <li>Teman: Det går lätt att byta utseendet på färdiga webblösnignar.</li>
+                    <li>Följer principen om separation of concerns: CSS och HTML är uppdelade i egna filer.</li>
+                </ul>
+
+                <h3>Nackdelar</h3>
+                <ul class="cons">
+                    <li>Komplexitet: Med ökad kontroll följer ökad komplexitet.</li>
+                    <li>Laddningstider: Fler HTTP-förfrågningar kan sakta ner laddningstiden.</li>
+                </ul>
+
+                <h2>En modern blandning: TailwindCSS</h2>
+                <p>
+                    TailwindCSS är ett väldigt omdebatterat modernt CSS-ramverk som jag menar platsar sig väl i
+                    diskussionen om inline CSS vs externa stilmallar. Det som gör TailwindCSS speciellt är det faktum
+                    att det skulle kunna sägas kombinera de olika metoderna. Mycket likt inline css låter TailwindCSS
+                    utvecklare specificera egenskaper direkt i HTML – men det görs med förskapta klasser istället för
+                    med style-attributet. I regel modifierar en klass en egenskap, på så sätt uppnås egentligen samma
+                    sak som om en skulle skriva inline CSS. Men med färre tecken.
+                </p>
+
+                <p>
+                    Som tidigare nämnt är användningen av TailwindCSS mycket omdebatterad. Detta grundar sig till stor
+                    del i att extern CSS gärna anses bättre med alla sina fördelar. Främst ur ett perspektiv av
+                    återanvändning och underhåll. Här bör dock poängteras att merparten av förespråkare för TailwindCSS
+                    använder sig av återanvändbara komponenter i JavaScript-ramverk såsom till exempel React, Vue eller
+                    Angular. Genom att kombinera TailwindCSS med komponenter omfördelas för- och nackdelarna då
+                    komponenterna återigen förenklar underhåll och återanvändning på ett vis som gör att ändringar visas
+                    konsekvent över hela webbplatsen.
+                </p>
+            </main>
+
+            <aside> <!-- Innehåll som indirekt relaterar till huvudinnehållet i detta fall används det för att gå med i ett nyhetsbrev. -->
+                <h2>Nyhetsbrev</h2>
+                <form> <!-- Ingen action specificerad då uppgiftskraven uttryckligen uppmanar till att inte göra formuläret funktionellt. -->
+                    <label for="name">Namn:</label>
+                    <input type="text" id="name" name="name" value="" placeholder="Namn här...">
+                    <label for="email">Epost:</label>
+                    <input type="email" id="email" name="email" value="" placeholder="Epost här...">
+                    <button class="button" type="submit">Skicka</button>
+                </form>
+            </aside>
+        </div>
+
+        <!-- En enkel footer -->
+        <footer>
+            <p>Senast uppdaterad: 2026-03-24</p>
+            <p>
+                Hemsidan är skapad av <a href="https://snicon.rip">Sixten Peterson</a> för kursen <a href="https://mau.se/sok-utbildning/kurser/DA280A">DA280A</a> på
+                <a href="https://mau.se/">Malmö Universitet</a>. Källkoden finns tillgänglig på <a href="https://github.com/Snicon/DA280A_Web-Development-I">Github</a>.
+            </p>
+        </footer>
+    </body>
+</html>

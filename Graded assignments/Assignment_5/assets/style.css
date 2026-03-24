@@ -1,0 +1,259 @@
+/* Återställning och enklare modifikationer av vanligt förekommande element */
+body {
+    background-color: #f4f4f5;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif;
+    margin-bottom: 1.25rem;
+    margin-top: 3rem;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #7e22ce;
+    font-weight: 500;
+}
+
+p {
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f5d0fe;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+/* Navigation */
+nav {
+    background-color: white;
+}
+
+.nav-heading {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+nav ul li {
+    padding: 0.8rem 2.5rem 0.8rem 0;
+}
+
+nav ul li a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Containers */
+.container {
+    padding: 4rem 2rem;
+}
+
+.container-start {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 6rem;
+    align-items: start;
+}
+
+.container-start main {
+    flex: 3;
+}
+
+.container-start aside {
+    flex: 1;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.container-start aside h2 {
+    margin: 0;
+}
+
+.container-start aside form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.6rem;
+}
+
+.container-start aside form input {
+    margin-top: 0.4rem;
+    background-color: #e4e4e7;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.7rem 1rem;
+}
+
+.container-start aside form label {
+    margin-top: 0.8rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container p {
+    font-size: 0.9rem;
+    text-align: end;
+    margin: 0;
+}
+
+/* Kurskortsrelaterad CSS */
+.title-courses {
+    margin-bottom: 1.5rem;
+    margin-left: 1.25rem;
+}
+
+.container-courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    grid-auto-rows: 1fr;
+}
+
+.container-courses h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.container-course {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.course-body {
+    background-color: white;
+    padding: 1rem 1rem;
+    border-radius: 0.6rem 0.6rem 0 0;
+    display: flex;
+    flex: 1;
+    gap: 1.5rem;
+}
+
+.course-body > img {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 0.6rem;
+}
+
+.course-body > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-body > div p {
+    margin: 0;
+}
+
+.course-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem; /** Det går tveklöst att diskutera tillgängligheten kring detta... **/
+    background-color: #f5d0fe;
+    padding: 0.4rem 2rem;
+    border-radius: 0 0 0.6rem 0.6rem
+}
+
+.course-footer p {
+    margin: 0;
+}
+
+/* Färgtema för kurskortsfooter baserat på skolornas grafiska profil */
+.ltu {
+    background-color: #2E4668;
+    color: white;
+}
+
+.miun {
+    background-color: #FFD701;
+    color: black;
+}
+
+.valla {
+    background-color: #008AC8;
+    color: white;
+}
+
+.uoh {
+    background-color: #000;
+    color: white;
+}
+
+.hig {
+    background-color: #006AB0;
+    color: white;
+}
+
+.su {
+    background-color: #002F5F;
+    color: white;
+}
+
+.mau {
+    background-color: #E4032E;
+    color: white;
+}
+
+/* CSS för knapp */
+.button {
+    background-color: #9333ea;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    font-family: "Roboto Slab", serif;
+}
+
+.button:hover {
+    background-color: #6b21a8;
+    cursor: pointer;
+}
+
+/* CSS för listorna med för-/nackdelar */
+.pros {
+    list-style-type: "+ ";
+}
+
+.cons {
+    list-style-type: "- ";
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid black;
+    background-color: #e4e4e7;
+    text-align: center;
+    padding-bottom: 0.45rem;
+}

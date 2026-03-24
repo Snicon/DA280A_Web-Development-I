@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="sv"> <!-- Sätter språket till svenska för webbsidan, dels för validatorn och dels för tillgängligheten -->
+<head>
+    <meta charset="UTF-8"> <!-- Specificerar kodningen till UTF-8, vilket ger stöd för bokstäver såsom Å, Ä, Ö och andra tecken.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Här för responsivitet -->
+
+    <link rel="stylesheet" href="assets/style.css">
+    <title>DA280A - Inlämning 5</title> <!-- Specificerar titeln för webbsidan -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header> <!-- En enkel header lik bildbeskrivningen i uppgiften -->
+            <p class="nav-heading">Min Webbsida</p> <!-- Webbsidans namn -->
+            <div class="info-container">
+                <p>Inlämningsuppgift 5</p>
+                <p>Sixten Peterson</p>
+                <p>AQ9300</p>
+            </div>
+        </header>
+
+        <nav> <!-- Navigationselement som länkar vidare till webbplatsens andra sidor. -->
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="min_forfattare.html">Min författare</a></li>
+                <li><a href="om_css.html">Om CSS</a></li>
+                <li><a href="ovrigt.html">Övrigt</a></li>
+            </ul>
+        </nav>
+
+        <main class="container"> <!-- Get lite padding -->
+            <h1 class="title-courses">Mina avklarade kurser</h1> <!-- Huvudrubrik -->
+            <div class="container-courses"> <!-- Container för alla kurser, nyttjar sig av grid för layouting -->
+                <div class="container-course"> <!-- Ytterligare en container (hade lika gärna kunnat kallast course-card eller dylikt, nyttjar flex för att styra layouten -->
+                    <div class="course-body"> <!-- Själva "kroppen" av kurskortet -->
+                        <img src="assets/images/logos/ltu.jpeg" alt=""> <!-- logotypen för skolan där kursen ägt rum -->
+                        <div>
+                            <h2>Inledande programmering i Java</h2> <!-- Kursnamn -->
+                            <p>Luleå Tekniska Universitet</p> <!-- Skolans namn -->
+                        </div>
+                    </div>
+                    <div class="course-footer ltu"> <!-- kurskortsfot, visar lite kursinformation men med mindre fokus än kurskortskroppen. -->
+                        <p>Högskolepoäng: 7,5 hp</p> <!-- Högskolepoäng (om relevant) -->
+                        <p>Betyg: G#</p> <!-- Betyg (om relevant, folkhögskola ger inte betyg utan kursintyg t.ex.) -->
+                    </div>
+                </div>
+                <div class="container-course"> <!-- Principen är densamma som för koretet ovan, se kommentarer där -->
+                    <div class="course-body">
+                        <img src="assets/images/logos/miun.png" alt="">
+                        <div>
+                            <h2>Universell utformning av digital tillgänglighet</h2>
+                            <p>Mittuniversitetet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer miun">
+                        <p>Högskolepoäng: 15 hp</p>
+                        <p>Betyg: A</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/valla.webp" alt="">
+                        <div>
+                            <h2>Linux steg 1</h2>
+                            <p>Valla Folkhögskola</p>
+                        </div>
+                    </div>
+                    <div class="course-footer valla">
+                        <p>Högskolepoäng: N/A</p>
+                        <p>Betyg: N/A</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/uoh.png" alt="">
+                        <div>
+                            <h2>Introduktion till datorn som arbetsredskap</h2>
+                            <p>Helsingfors universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer uoh">
+                        <p>Högskolepoäng: 1</p>
+                        <p>Betyg: 5</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/hig.jpeg" alt="">
+                        <div>
+                            <h2>Introduktion till Linux och små nätverk</h2>
+                            <p>Högskolan i Gävle</p>
+                        </div>
+                    </div>
+                    <div class="course-footer hig">
+                        <p>Högskolepoäng: 7,5</p>
+                        <p>Betyg: C</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/ltu.jpeg" alt="">
+                        <div>
+                            <h2>Objektorienterad programmering i Java</h2>
+                            <p>Luleå Tekniska Universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer ltu">
+                        <p>Högskolepoäng: 7,5</p>
+                        <p>Betyg: G</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/ltu.jpeg" alt="">
+                        <div>
+                            <h2>Databaser I</h2>
+                            <p>Luleå Tekniska Universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer ltu">
+                        <p>Högskolepoäng: 7,5</p>
+                        <p>Betyg: G</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/mau.png" alt="">
+                        <div>
+                            <h2>Programming in C#</h2>
+                            <p>Malmö universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer mau">
+                        <p>Högskolepoäng: 7,5</p>
+                        <p>Betyg: A</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/su.png" alt="">
+                        <div>
+                            <h2>Grundkurs i organisation</h2>
+                            <p>Stockholms universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer su">
+                        <p>Högskolepoäng: 7,5</p>
+                        <p>Betyg: E</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/su.png" alt="">
+                        <div>
+                            <h2>Programmering för mobiler</h2>
+                            <p>Stockholms universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer su">
+                        <p>Högskolepoäng: 7,5</p>
+                        <p>Betyg: E</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/hig.jpeg" alt="">
+                        <div>
+                            <h2>Grundläggande databehandling</h2>
+                            <p>Högskolan i Gävle</p>
+                        </div>
+                    </div>
+                    <div class="course-footer hig">
+                        <p>Högskolepoäng: 7,5</p>
+                        <p>Betyg: VG</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/uoh.png" alt="">
+                        <div>
+                            <h2>Introduktion till programmering</h2>
+                            <p>Helsingfors universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer uoh">
+                        <p>Högskolepoäng: 5</p>
+                        <p>Betyg: 5</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/uoh.png" alt="">
+                        <div>
+                            <h2>DevOps with Docker</h2>
+                            <p>Helsingfors universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer uoh">
+                        <p>Högskolepoäng: 1</p>
+                        <p>Betyg: G</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/uoh.png" alt="">
+                        <div>
+                            <h2>DevOps with Docker: docker-compose</h2>
+                            <p>Helsingfors universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer uoh">
+                        <p>Högskolepoäng: 1</p>
+                        <p>Betyg: G</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/uoh.png" alt="">
+                        <div>
+                            <h2>DevOps with Docker: security and optimization</h2>
+                            <p>Helsingfors universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer uoh">
+                        <p>Högskolepoäng: 1</p>
+                        <p>Betyg: G</p>
+                    </div>
+                </div>
+                <div class="container-course">
+                    <div class="course-body">
+                        <img src="assets/images/logos/mau.png" alt="">
+                        <div>
+                            <h2>Studieteknik - RASK</h2>
+                            <p>Malmö universitet</p>
+                        </div>
+                    </div>
+                    <div class="course-footer mau">
+                        <p>Högskolepoäng: 3</p>
+                        <p>Betyg: G</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- En enkel footer -->
+        <footer>
+            <p>Senast uppdaterad: 2026-03-24</p>
+            <p>
+                Hemsidan är skapad av <a href="https://snicon.rip">Sixten Peterson</a> för kursen <a href="https://mau.se/sok-utbildning/kurser/DA280A">DA280A</a> på
+                <a href="https://mau.se/">Malmö Universitet</a>. Källkoden finns tillgänglig på <a href="https://github.com/Snicon/DA280A_Web-Development-I">Github</a>.
+            </p>
+        </footer>
+    </body>
+</html>

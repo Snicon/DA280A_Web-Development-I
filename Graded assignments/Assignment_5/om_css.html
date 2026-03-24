@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="sv"> <!-- Sätter språket till svenska för webbsidan, dels för validatorn och dels för tillgängligheten -->
+    <head>
+        <!-- Specificerar kodningen till UTF-8, vilket ger stöd för bokstäver såsom Å, Ä, Ö och andra tecken.-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Här för responsivitet -->
+        <link rel="stylesheet" href="assets/style.css">
+        <title>DA280A - Inlämning 5</title> <!-- Specificerar titeln för webbsidan -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <!-- Sätter en beige bakgrundsfärg för sidan och återställer margin till 0 för att slippa ett "glapp"/white space
+    mellan innehållet och kanten på sidan. -->
+    <body>
+    <header> <!-- En enkel header lik bildbeskrivningen i uppgiften -->
+        <p class="nav-heading">Min Webbsida</p> <!-- Webbsidans namn -->
+        <div class="info-container">
+            <p>Inlämningsuppgift 5</p>
+            <p>Sixten Peterson</p>
+            <p>AQ9300</p>
+        </div>
+    </header>
+
+    <nav> <!-- Navigationselement som länkar vidare till webbplatsens andra sidor. -->
+        <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="min_forfattare.html">Min författare</a></li>
+            <li><a href="om_css.html">Om CSS</a></li>
+            <li><a href="ovrigt.html">Övrigt</a></li>
+        </ul>
+    </nav>
+
+        <main class="container"> <!-- Använder ett main element för det centrala innehållet av webbsidan -->
+            <!-- Sätter h1-elementet/huvudrubriken som centrerad och understruken. Ytterligare lägger jag en margin på
+            botten för att öka mellanrummet/white space mellan huvudrubriken och huvudinnehållet. -->
+            <h1>
+                Om CSS
+            </h1>
+
+            <h2>Vad är CSS?</h2>
+            <p>
+                Kort sagt är CSS utseendet av en webbsida. CSS ger liv till en webbsida genom färg, form och i viss
+                utsträckning layout (även om layouting ibland kräver ändring av HTML). CSS står för Cascading Style
+                Cheet och är även känt som stilmall på svenska. Genom att justera webbsidans CSS kan egenskaper som
+                typsnitt, färg, storlek och position för element i webbsidans förändras i utseende. Ytterligare kan CSS
+                styra hur HTML renderas/visas på paper eller i annan media.
+            </p>
+
+            <h3>Varför finns CSS?</h3>
+            <p>
+                Som vi tidigare varit inne på så finns CSS för att kunna förbättra den grafiska designen av en webbsida.
+                Utan CSS kan webbsidor bli ganska otilltalande, speciellt för komersiella företag som försöker sälja
+                till kunder där webbsidan blir en del av en potentiell kunds intryck av företaget. När HTML mest
+                användes för vetenskapliga rapportet, teknisk dokumentation och dylikt var CSS inte lika viktigt men på
+                dagens World Wide Web är det svårt att föreställa sig en värld utan CSS.
+            </p>
+
+            <h3>Hur använder vi oss av CSS?</h3>
+            <p>Det finns flera olika sätt att används CSS på:</p>
+            <ul>
+                <li>"Inline styling"</li>
+                <li>Intern stilmall</li>
+                <li>Extern stilmall</li>
+            </ul>
+            <p>
+                <span>Inline styling</span> gör det möjligt att genom HTML-attributet
+                <code>style</code> justera CSS-egenskaper för ett element. Det går även att använda en
+                <span>intern stilmall</span> där CSS-selektorer och -egenskaper används för
+                att justera egenskaper för element antigen direkt eller genom klasser och id som appliceras som attribut
+                i HTML-elementen. Önskar en som utvecklare att följa principen om "separation of concerns" som inom
+                webbutveckling lite förenklat kan beskrivas som att en separerar HTML, JavaScript och CSS till egna
+                filer så går det att använda <span>externa stilmallar</span>. För att nyttja
+                sig av detta skapar utvecklaren en egen <code>&lt;namn&gt;.css</code>-fil. Därefter "länkar" utvecklaren
+                till css-filen genom ett link-element nästlat i head-elementet av HTML-dokumentet. Exempel på hur det
+                skulle kunna se ut följer: <code>&lt;link rel="stylesheet" href="styles.css" type="text/css"&gt;</code>.
+            </p>
+
+            <h2>Det finns olika versioner av CSS</h2>
+            <h3>Vilka versioner finns det?</h3>
+            <ul>
+                <li>
+                    CSS nivå 1 - slutet av 1996
+                </li>
+                <li>
+                    CSS nivå 2 - april 1998
+                </li>
+                <li>
+                    CSS version 2.1 - juni 2011
+                </li>
+                <li>
+                    CSS 3 - pågående (detta enligt HTML och CSS-boken. MDN menar att det aldrig kommer finnas en
+                    version 3, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">se artikel om CSS på MDN</a>)
+                </li>
+                <li>
+                    CSS - I modern tid utvecklas CSS istället i moduler och kallas således bara för CSS
+                    (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS">se artikel om CSS på MDN</a>).
+                </li>
+            </ul>
+
+            <p>
+                Källa för CSS-versioner: HTML och CSS-boken av Rolf Staflin (andra tryckningen av sjunde omarbetade
+                upplaga) om inget annat nämns.
+            </p>
+            <p>
+                CSS nivå 1 utgjorde grunden för CSS, sedan byggde CSS nivå 2 vidare på nivå 1 genom att introducera
+                "stöd för olika mediumtyper, nedladdningsbara teckensnitt, utplacering av element och tabeller"
+                (HTML och CSS-boken). CSS version 2.1 byggde i sin tur vidare på CSS nivå 2 med lite nya funktioner och
+                rättningar. Därpå började arbetet på CSS3 som senare kom att bli känt som bara CSS. Nu finns det
+                istället olika moduler inom CSS som får olika nivåer ("levels" på engelska) som motsvarar en version för
+                just den modulen.
+            </p>
+
+            <h3>Varför finns det olika versioner? (Varför är det inte bara en?)</h3>
+            <p>
+                Varför kan en bok ha mer än en utgåva/upplaga, räcker det inte med en? Poängen med min motfråga är att
+                understryka vikten av förändring för att spegla samtidens utveckling. Får en bok inte några nya upplagor
+                (speciellt utbildande litteratur) riskerar den att bli inaktuell. På samma vis kräver
+                CSS-specifikationen förändringar för att hålla sig aktuell. Genom nya versioner av CSS tillåts tekniken
+                utvecklas och fortsätta vara ett kraftfullt verktyg inom webbutveckling även för framtidens
+                webbutveckling.
+            </p>
+            <h3>
+                Varför är det viktigt att veta vilken version som en viss CSS-egenskap tillhör? (Kan detta påverka
+                webbplatsen?)
+            </h3>
+            <p>
+                För att utvecklaren ska kunna få webbsidan att se enhetlig ut över olika webbläsare (och versioner av
+                webbläsare). Detta var i stor utsträckning viktigare förr i tiden då webbläsare hade större skillnader
+                och avvikelser från såväl HTML- som CSS-specifikationen. Värt att notera är att olika webbläsare är
+                olika snabba i utvecklingen av att följa CSS-specifikationen, varför det fortfarande är relevant att
+                använda verktyg som <a href="https://caniuse.com/">caniuse.com</a> för att kontrollera att de största
+                webbläsarna har stöd för en egenskap man vill använda. Saknas stödet ökar risken att utseendet besökarna
+                möts av avviker från utseendet i utvecklarens miljö, vilket leder till dålig användarupplevelse.</p>
+        </main>
+
+        <!-- En enkel footer -->
+        <footer>
+            <p>Senast uppdaterad: 2026-03-24</p>
+            <p>
+                Hemsidan är skapad av <a href="https://snicon.rip">Sixten Peterson</a> för kursen <a href="https://mau.se/sok-utbildning/kurser/DA280A">DA280A</a> på
+                <a href="https://mau.se/">Malmö Universitet</a>. Källkoden finns tillgänglig på <a href="https://github.com/Snicon/DA280A_Web-Development-I">Github</a>.
+            </p>
+        </footer>
+    </body>
+</html>
