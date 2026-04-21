@@ -101,11 +101,11 @@ In addition to making the website in the same way that the others were made we a
 |-------------------|-----------|------------|---------------------|
 | Assignment 1      | &#9745;   | G (Pass)   | G (Pass)            |
 | Assignment 2      | &#9745;   | G (Pass)   | G (Pass)            |
-| Assignment 3      | &#9745;   | -          | G (Pass)            |
+| Assignment 3      | &#9745;   | G (Pass)   | G (Pass)            |
 | Assignment 4      | &#9745;   | -          | G (Pass)            |
-| Assignment 5      | &#9744;   | -          | G (Pass)            |
-| Assignment 6      | &#9744;   | -          | G (Pass)            |
+| Assignment 5      | &#9745;   | -          | G (Pass)            |
+| Assignment 6      | &#9745;   | -          | G (Pass)            |
 
 ### Final grade
-To be determined.
+G/Pass in 4 credits out of 7.5 credits so far. Final grade pending as some assignments are not graded yet.
 
