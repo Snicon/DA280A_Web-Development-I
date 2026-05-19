@@ -24,6 +24,22 @@ Part one focuses on making a website presenting an author using the following HT
 <strong>
 ```
 
+#### Image
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl1-1.png?raw=true" width="600"/>
+
+##### URL
+https://webshare.mah.se/aq9300/DA280A/inlamningar/inl1/index.html
+
+#### Part 2
+Part two focues on answering some basic questions about different protocols, HTML, etc.
+
+#### Image
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl1-2.png?raw=true" width="600"/>
+
+##### URL
+https://webshare.mah.se/aq9300/DA280A/inlamningar/inl1/del2.html
+
+
 ### Assignment 2 - Presenting artists/bands from Australia, Sweden & USA
 In short the website is required to present at least ten artists/bands, at least two from each country. All information shall be presented using tables and include the following columns:
 - Artist/band name
@@ -50,6 +66,12 @@ The required HTML-elements for this assignment includes:
 
 Additionally the file formats `.jpg`, `.png` and `.gif` should be included at least once in the code.
 
+#### Image
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl2.png?raw=true" width="600"/>
+
+##### URL
+https://webshare.mah.se/aq9300/DA280A/inlamningar/inl2/index.html
+
 
 ### Assignment 3 - Making a form for a newspaper
 The website is supposed to allow the visitors to answer a form about a newspaper in order to get the chance of winning a free T-shirt. Other than the elements required to make a form and inputs the following elements are required:
@@ -58,9 +80,22 @@ The website is supposed to allow the visitors to answer a form about a newspaper
 <legend>
 ```
 
+#### Image
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl3.png?raw=true" width="600"/>
+
+##### URL
+https://webshare.mah.se/aq9300/DA280A/inlamningar/inl3/index.html
+
+
 ### Assignment 4 (Part 1, 2 & 3) - Part 1: Applying CSS to Assignment 1 Part 1, Part 2: A webpage answering questions about CSS, Part 3: Applying CSS to a template
 #### Part 1
 This part focuses on applying CSS to modify the background, headings, and images of the website made in Assignment 1 Part 1
+
+#### Image
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl4-1.png?raw=true" width="600"/>
+
+##### URL
+https://webshare.mah.se/aq9300/DA280A/inlamningar/inl4/del1/index.html
 
 #### Part 2
 Part 2 is just a web page containing answers to questions related to CSS while using the following CSS properties:
@@ -75,6 +110,13 @@ font-size
 font-weight
 ```
 
+#### Image
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl4-2.png?raw=true" width="600"/>
+
+##### URL
+https://webshare.mah.se/aq9300/DA280A/inlamningar/inl4/del2/index.html
+
+
 #### Part 3
 This part of the assignment is about mimicking a screenshot of a website by applying CSS to a provided HTML page. The following properties will be used at least once in the CSS:
 ```CSS
@@ -87,11 +129,37 @@ font-style
 font-weight
 ```
 
+#### Image
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl4-3.png?raw=true" width="600"/>
+
+##### URL
+https://webshare.mah.se/aq9300/DA280A/inlamningar/inl4/del3/index.html
+
 ### Assignment 5 - Mimicking a screenshot
 For this assignment we are supposed to make a website that is identical to a screenshot with the freedom of choosing colors ourselves.
 
+#### Images
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl5-1.png?raw=true" width="600"/>
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl5-2.png?raw=true" width="600"/>
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl5-3.png?raw=true" width="600"/>
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl5-4.png?raw=true" width="600"/>
+
+##### URL
+https://webshare.mah.se/aq9300/DA280A/inlamningar/inl5/index.html
+
 ### Assignment 6 - Implementing a layout from a screenshot with some creative freedom
 In addition to making the website in the same way that the others were made we are also supposed to make it responsive using media queries.
+
+#### Image
+##### Desktop
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl6-desktop.png?raw=true" width="600"/>
+##### Tablet
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl6-tablet.png?raw=true" width="600"/>
+##### Mobile
+<img src="https://github.com/Snicon/DA280A_Web-Development-I/blob/main/Assignment%20images/inl6-mobile.png?raw=true" width="600"/>
+
+##### URL
+https://webshare.mah.se/aq9300/DA280A/inlamningar/inl6/index.html
 
 ## Progress & grades
 
